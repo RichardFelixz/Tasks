@@ -1,13 +1,11 @@
 package com.devmasterteam.tasks.service.repository.remote
 
-import android.media.session.MediaSession
 import com.devmasterteam.tasks.service.constants.TaskConstants
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 class RetrofitClient private constructor() {
 

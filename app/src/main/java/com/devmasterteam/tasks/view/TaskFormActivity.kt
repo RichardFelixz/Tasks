@@ -1,22 +1,20 @@
 package com.devmasterteam.tasks.view
 
 import android.app.DatePickerDialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.devmasterteam.tasks.R
-import com.devmasterteam.tasks.databinding.ActivityRegisterBinding
 import com.devmasterteam.tasks.databinding.ActivityTaskFormBinding
 import com.devmasterteam.tasks.service.model.PriorityModel
 import com.devmasterteam.tasks.service.model.TaskModel
-import com.devmasterteam.tasks.viewmodel.RegisterViewModel
 import com.devmasterteam.tasks.viewmodel.TaskFormViewModel
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
 
 class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
     DatePickerDialog.OnDateSetListener {
@@ -92,7 +90,7 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
             this.description = binding.editDescription.text.toString()
             this.priorityId = listPriority[binding.spinnerPriority.selectedItemPosition].id
             this.complete = binding.checkComplete.isChecked
-            this.duoDate = binding.buttonDate.text.toString()
+            this.dueDate = binding.buttonDate.text.toString()
         }
 
         viewModel.save(task)

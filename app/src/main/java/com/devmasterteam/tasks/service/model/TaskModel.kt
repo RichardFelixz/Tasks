@@ -20,10 +20,12 @@ class TaskModel : Serializable{
     @SerializedName("Description")
     var description: String = ""
 
-    @SerializedName("DuoDate")
-    var duoDate: String = ""
+    @SerializedName("DueDate")
+    var dueDate: String = ""
 
     @SerializedName("Complete")
     var complete: Boolean = false
+
+    var priorityDescription: String = ""
 
 }
